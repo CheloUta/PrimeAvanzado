@@ -8,6 +8,7 @@ import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
@@ -16,12 +17,13 @@ public class IndexController implements Serializable {
 
     @EJB
     private UsuarioFacadeLocal usuarioEJB;
+    @Inject
     private Usuario usuario;
 
     @PostConstruct
     public void init() {
 
-        usuario = new Usuario();
+    //    usuario = new Usuario();
     }
 
     public Usuario getUsuario() {

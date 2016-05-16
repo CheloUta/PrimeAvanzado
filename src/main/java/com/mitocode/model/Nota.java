@@ -36,13 +36,13 @@ public class Nota implements Serializable {
     private String cuerpo;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "fecha")
+    @Column(name = "fecha", insertable = false)
     private Date fecha;
 
-    @Column(name = "comentarioAdmin")
+    @Column(name = "comentarioAdmin", insertable = false)
     private String comentarioAdmin;
 
-    @Column(name = "valorizacion")
+    @Column(name = "valorizacion", insertable = false)
     private short valorizacion;
 
     public int getCodigo() {

@@ -9,6 +9,7 @@ import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
@@ -17,14 +18,16 @@ public class UsuarioController implements Serializable {
 
     @EJB
     private UsuarioFacadeLocal usuarioEJB;
-
+    
+    @Inject
     private Usuario usuario;
+    @Inject
     private Persona persona;
 
     @PostConstruct
     public void init() {
-        usuario = new Usuario();
-        persona = new Persona();
+        //usuario = new Usuario();
+        //persona = new Persona();
 
     }
 
